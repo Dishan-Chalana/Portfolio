@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+nav {
+    background: black;
+    height: 80px;
+    width: 100%;
+    position: relative;
+
+}
+
+nav ul {
+    float: right;
+    margin-right: 300px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 500;
+
+}
+
+.navLinks:active,
+.navLinks:hover {
+    color: rgb(255, 38, 38);
+    transition: 0.7s;
+}
+
+.homeDiv {
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    height: 850px;
+    background-image: url("/src/img/Homebg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+
+}
+
+.homeContainer {
+    padding-left: 300px;
+    padding-right: 300px;
+    color: rgb(255, 255, 255);
+    padding-top: 20vh;
+}
+
+.homeName {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.homeAbout {
+    margin-top: 10px;
+}
+
+.homeServices {
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+.profilePic {
+
+    margin-right: 300px;
+}
+
+.homeBtn {
+
+    background-color: rgb(255, 52, 52);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.homeBtn:hover {
+
+    transition: 0.7s;
+    color: white;
+}
+
+.aboutDiv {
+    background-color: rgb(92, 92, 92);
+    width: 100%;
+    height: 850px;
+
+
+}
+
+.aboutContainer {
+    padding: 0px 300px;
+}
+
+.sectionHeadder {
+    text-align: center;
+    padding-top: 10vh;
+}
+
+
+.sectionTitle {
+    color: rgb(255, 57, 57);
+    text-transform: uppercase;
+    font-size: 40px;
+
+}
+
+.sectionDescription {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+
+.aboutRow {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.aboutColoumn-1 {
+    max-width: 50%;
+
+    align-items: center;
+    position: relative;
+
+
+}
+
+.aboutBgPic {
+    margin: 0;
+    margin-top: 60px;
+}
+
+.aboutColoumn-2 {
+
+    padding-top: 30vh;
+    padding-left: 200px;
+}
+
+.aboutText {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.aboutLine {
+    background-color: red;
+    width: 450px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 40px 0;
+}
+
+.socialLinks {
+
+    display: flex;
+    margin-top: 15px;
+    gap: 15px;
+
+
+}
+
+.social-links {
+    padding: 16px;
+    width: 50px;
+
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: black;
+}
+
+
+.social-links:active,.social-links:hover {
+    color: #ff3636;
+    border: 2px solid rgb(255, 71, 71);
+    transition: 0.6s;
+}
+
+.servicesDiv {
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+    height: 1050px;
+    padding: 0px 300px;
+
+}
+
+.service-item {
+    margin: 50px 50px;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    justify-self: center;
+
+}
+
+.service-icon {
+    padding: 65px 1px;
+    height: 220px;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid black;
+    color: black;
+
+}
+
+
+.col-Item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    row-gap: 100px;
+}
+
+.service-text{
+    margin-top: 10px;
+
+}
+
+/* ---------- skills section ----------- */
+
+.skillsDiv {
+    background-color: rgb(255, 170, 170);
+    width: 100%;
+    height: 1050px;
+}
