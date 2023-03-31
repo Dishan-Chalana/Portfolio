@@ -10,6 +10,8 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* ---------------- navigation ----------------  */
+
 nav {
     background: black;
     height: 80px;
@@ -44,6 +46,7 @@ nav ul li a {
     transition: 0.7s;
 }
 
+/* ---------------- home section ----------------  */
 .homeDiv {
     background-color: rgb(37, 37, 37);
     width: 100%;
@@ -99,6 +102,7 @@ nav ul li a {
     color: white;
 }
 
+/* ---------------- about section ----------------  */
 .aboutDiv {
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -182,7 +186,7 @@ nav ul li a {
 }
 
 .social-links {
-    padding: 16px;
+    padding: 16px 1px;
     width: 50px;
 
     text-align: center;
@@ -320,18 +324,19 @@ nav ul li a {
 
 }
 
-/* ---------- Edication css --------- */
+/* ---------------- education & experiance section ----------------  */
 .experienceDiv {
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 1250px;
     padding: 0 300px;
-    
+
 }
+
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
-    
+
 }
 
 .experience .timeline {
@@ -386,20 +391,20 @@ nav ul li a {
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 46px;
-  right: 10px;
-  z-index: 1;
-  border: 10px solid;
-  border-color: transparent transparent transparent #dddddd;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 46px;
+    right: 10px;
+    z-index: 1;
+    border: 10px solid;
+    border-color: transparent transparent transparent #dddddd;
 }
 
 .experience .timeline .timeline-item.right::before {
-  left: 10px;
-  border-color: transparent #dddddd transparent transparent;
+    left: 10px;
+    border-color: transparent #dddddd transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -466,27 +471,27 @@ nav ul li a {
         width: 100%;
         padding-left: 38px;
     }
-    
+
     .experience .timeline .timeline-item.left {
         padding-right: 0;
     }
-    
+
     .experience .timeline .timeline-item.right {
         left: 0%;
         padding-left: 38px;
     }
 
-    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.left::after,
     .experience .timeline .timeline-item.right::after {
         left: 0;
     }
-    
+
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
         border-color: transparent #dddddd transparent transparent;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-date,
     .experience .timeline .timeline-item.right .timeline-date {
         position: relative;
@@ -496,7 +501,7 @@ nav ul li a {
         text-align: left;
         margin-bottom: 10px;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
@@ -506,14 +511,24 @@ nav ul li a {
 
 /* ---------------- projects section ----------------  */
 
-.projectsDiv{
+.projectsDiv {
     background-color: rgb(87, 79, 79);
     width: 100%;
-    height: 1250px;
+    height: 1400px;
     padding: 0 300px;
 
 }
 
+.sectionDescription-contact {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+.project-grid {
+    margin-top: 50px;
+}
 
 .col-item-projects {
     display: grid;
@@ -522,16 +537,12 @@ nav ul li a {
     justify-content: center;
     justify-items: center;
     text-align: center;
-    
-    
-    
-    
+
 
 }
 
 .projects-item {
-    
-    margin: 50px -20px;
+
     text-align: center;
     width: 500px;
     height: 600px;
@@ -541,7 +552,8 @@ nav ul li a {
 
 .projectsIcon {
     padding: 4px 1px;
-    height: 600px;
+    margin-bottom: -45px;
+    height: 400px;
     width: 420px;
     text-align: center;
     text-decoration: none;
@@ -550,12 +562,206 @@ nav ul li a {
 
 }
 
+.project-text-area {
+    background-color: #f72525;
+    margin: 40px;
+    height: 100px;
+}
 
-.projects-item .projectsdev h3 {
-    margin-top: 10px;
+
+.projects-item .projectsdev .project-text-area p {
+    padding: 10px;
+    margin-bottom: 10px;
 
 }
-.projects-item .projectsdev p {
-    margin: 10px 30px;
-     
+
+.project-grid-2 {
+    margin-top: -50px;
+}
+
+
+/* ---------------- contact me section ----------------  */
+
+.contactDiv {
+
+    width: 100%;
+    height: 850px;
+    padding: 0 300px;
+    background-image: url("/src/img/footerBg.png");
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.contactSection {
+    margin-top: 50px;
+    display: flex;
+}
+
+
+
+/* contact me left side */
+.contact-col-1 {
+    background-color: rgba(255, 255, 255, 0.027);
+    width: 40%;
+    height: 550px;
+}
+
+.contact-details-row {
+    display: flex;
+}
+
+.contact-icon {
+
+    height: 35px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 3px 2px;
+
+}
+
+
+.contactMe-title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    color: white;
+}
+
+
+.contact-col-1 {
+
+    padding-top: 100px;
+    justify-content: center;
+
+}
+
+.contact-detais-rows {
+    margin-top: 70px;
+    padding-left: 80px;
+    color: white;
+}
+
+.contactMe-tag span {
+    font-weight: 900;
+}
+
+.contactMe-tag {
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+
+}
+
+/* contact me right side */
+.contact-col-2 {
+    background-color: rgba(255, 255, 255, 0);
+    width: 60%;
+    height: 550px;
+}
+
+.contact-form {
+    margin: 50px;
+}
+
+.contact-text-box {
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+#contact-name {
+    height: 50px;
+    width: 46%;
+}
+
+#contact-email {
+    height: 50px;
+    width: 50%;
+    margin-left: 20px;
+}
+
+#contact-subject {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#contact-massage {
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    resize: none;
+    padding-top: 10px;
+
+}
+
+
+
+.sendBtn {
+    background-color: rgb(255, 52, 52);
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 150px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+
+#contact-massage::placeholder {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------------- footer section ----------------  */
+
+footer {
+
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    background-color: rgb(3, 3, 3);
+    text-align: center;
+
+}
+
+.socialLinks-footer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-links-footer {
+    padding: 15px 1px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 251, 251);
+
+}
+
+
+
+.social-links-footer:active,
+.social-links-footer:hover {
+    color: #ff3636;
+    border: 2px solid rgb(255, 71, 71);
+    transition: 0.6s;
+}
+
+.copyright-text {
+    margin-top: 15px;
+}
+
+.copyright-text h1 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff;
 }
