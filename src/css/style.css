@@ -16,16 +16,20 @@ body {
     z-index: 10;
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
-    animation-fill-mode:backwards;
+    animation-fill-mode: backwards;
 }
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-     }
+    }
 }
+
+
 
 .circleBg {
     display: flex;
@@ -36,19 +40,9 @@ body {
 }
 
 
+
 /* ---------------- navigation ----------------  */
 
-nav {
-    background: rgba(0, 0, 0, 0.705);
-    height: 80px;
-    width: 100%;
-    
-    position: fixed;
-    top: 0;
-    z-index: 11;
-    
-
-}
 
 nav ul {
     float: right;
@@ -58,25 +52,40 @@ nav ul {
 nav ul li {
     display: inline-block;
     line-height: 80px;
-    margin: 0 10px;
-
+    margin: 0 5px;
 }
 
 nav ul li a {
     color: white;
-    font-size: 17px;
+    font-size: 18px;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #EF233C;
+    transition: .5s;
+    font-size: 18px;
+    font-weight: 00;
+
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: left;
+    line-height: 80px;
+    margin-left: 50px;
     cursor: pointer;
-    font-weight: 500;
-    text-decoration: none;
-
+    display: none;
 }
 
-.navLinks:active,
-.navLinks:hover {
-    color: #bf0029;
-    transition: 0.7s;
-    text-decoration: none;
+#check {
+    display: none;
 }
+
 
 /* ---------------- home section ----------------  */
 .homeDiv {
@@ -88,6 +97,12 @@ nav ul li a {
     background-position: center;
     display: flex;
 
+}
+
+.profilePic {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 .homeContainer {
@@ -110,15 +125,10 @@ nav ul li a {
     margin-top: 10px;
     font-size: 80px;
     max-width: 400px;
-    
+
 }
 
-.profilePic {
-
-    
-}
-
-.homeBtn {
+.cv-download-btn {
 
     background-color: #bf0029;
     color: rgb(255, 255, 255);
@@ -127,23 +137,23 @@ nav ul li a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
-    
+    transition: 0.5s;
     margin-top: 50px;
 }
 
-.homeBtn:hover {
+.cv-download-btn:hover {
 
-    transition: 0.7s;
-    color: white;
+    transition: 0.5s;
+    background-color: #EF233C;
 }
+
+
 
 /* ---------------- about section ----------------  */
 .aboutDiv {
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 850px;
-    
-
 
 }
 
@@ -176,12 +186,10 @@ nav ul li a {
     display: flex;
     justify-content: center;
 
-
 }
 
 .aboutColoumn-1 {
     max-width: 50%;
-
     align-items: center;
     position: relative;
 
@@ -195,7 +203,6 @@ nav ul li a {
 }
 
 .aboutColoumn-2 {
-
     padding-top: 30vh;
     padding-left: 200px;
 }
@@ -232,7 +239,7 @@ nav ul li a {
     border-radius: 50%;
     border: 2px solid rgb(14, 13, 20);
     color: rgb(14, 13, 20);
-    
+
 }
 
 
@@ -242,6 +249,9 @@ nav ul li a {
     border: 2px solid rgb(255, 71, 71);
     transition: 0.6s;
 }
+
+
+
 
 /* ---------------- service section ----------------  */
 .servicesDiv {
@@ -261,14 +271,15 @@ nav ul li a {
     justify-self: center;
 
 }
+
 .service-icon:hover {
     background-color: #bf0029;
     color: #ffffff;
     transition: 0.8s;
     cursor: pointer;
     border: none;
-    
-    
+
+
 }
 
 
@@ -295,13 +306,13 @@ nav ul li a {
 
 .service-text {
     margin-top: 10px;
- 
+
 
 }
 
 .serviceInfo {
     margin-top: 10px;
-    
+
 }
 
 /* ---------- skills section ----------- */
@@ -318,10 +329,9 @@ nav ul li a {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: -500px;
-    
+
     padding-top: 20px;
     margin: 0 250px
-
 }
 
 .col-item-skills-2pcs {
@@ -338,7 +348,7 @@ nav ul li a {
     color: rgb(0, 0, 0);
     text-align: center;
     padding-top: 20px;
-    
+
 
 }
 
@@ -348,9 +358,9 @@ nav ul li a {
     color: rgb(0, 0, 0);
     text-align: center;
     padding-top: 20px;
-    
-    
-    
+
+
+
 }
 
 .skill-section-text {
@@ -382,12 +392,13 @@ nav ul li a {
 
 
 }
+
 .skillsTitle {
     margin-top: 8px;
     color: rgb(14, 13, 20);
     font-weight: 600;
     font-size: 15.8px;
-    
+
 
 
 }
@@ -416,7 +427,7 @@ nav ul li a {
     background-color: #b9b9b93b;
     box-shadow: 5px 15px 18px #0000002f;
     margin-top: 40px;
-    
+
 }
 
 
@@ -559,52 +570,7 @@ nav ul li a {
     color: #636363;
 }
 
-@media (max-width: 767.98px) {
-    .experience .timeline::after {
-        left: 8px;
-    }
 
-    .experience .timeline .timeline-item {
-        width: 100%;
-        padding-left: 38px;
-    }
-
-    .experience .timeline .timeline-item.left {
-        padding-right: 0;
-    }
-
-    .experience .timeline .timeline-item.right {
-        left: 0%;
-        padding-left: 38px;
-    }
-
-    .experience .timeline .timeline-item.left::after,
-    .experience .timeline .timeline-item.right::after {
-        left: 0;
-    }
-
-    .experience .timeline .timeline-item.left::before,
-    .experience .timeline .timeline-item.right::before {
-        left: 18px;
-        border-color: transparent #dddddd transparent transparent;
-    }
-
-    .experience .timeline .timeline-item.left .timeline-date,
-    .experience .timeline .timeline-item.right .timeline-date {
-        position: relative;
-        top: 0;
-        right: auto;
-        left: 0;
-        text-align: left;
-        margin-bottom: 10px;
-    }
-
-    .experience .timeline .timeline-item.left .timeline-text,
-    .experience .timeline .timeline-item.right .timeline-text {
-        border-right: none;
-        border-left: 5px solid #dddddd;
-    }
-}
 
 /* ---------------- projects section ----------------  */
 
@@ -634,7 +600,7 @@ nav ul li a {
     justify-content: center;
     justify-items: center;
     text-align: center;
-    
+
 
 
 
@@ -648,7 +614,8 @@ nav ul li a {
     align-self: center;
     justify-self: center;
     margin: 10px;
-    
+    transition: 0.6s;
+
 
 }
 
@@ -669,26 +636,27 @@ nav ul li a {
 
 }
 
-.project-text-area h3{
+.project-text-area h3 {
     font-size: 20px;
 }
+
 .project-text-area {
     background-color: #ffffff;
     margin-top: -4px;
     height: 100px;
     padding: 10px;
-    
+
 
 }
 
-.projectsdev {  
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.397);  
+.projectsdev {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.397);
 }
 
 .projects-item .projectsdev .project-text-area p {
     margin-top: 10px;
-    
-    
+
+
 }
 
 
@@ -795,10 +763,10 @@ nav ul li a {
     color: white;
     font-size: 15px;
     font-weight: 500;
-    
+
 }
 
-#contact-name::placeholder{
+#contact-name::placeholder {
     color: rgba(253, 253, 253, 0.774);
     font-weight: 400;
     font-size: 15px;
@@ -816,7 +784,7 @@ nav ul li a {
     font-weight: 500;
 }
 
-#contact-email::placeholder{
+#contact-email::placeholder {
     color: rgba(253, 253, 253, 0.774);
     font-weight: 400;
     font-size: 15px;
@@ -834,11 +802,12 @@ nav ul li a {
     font-weight: 500;
 }
 
-#contact-subject::placeholder{
+#contact-subject::placeholder {
     color: rgba(253, 253, 253, 0.774);
     font-weight: 400;
     font-size: 15px;
 }
+
 #contact-massage {
     height: 200px;
     width: 100%;
@@ -854,7 +823,7 @@ nav ul li a {
 
 }
 
-#contact-massage::placeholder{
+#contact-massage::placeholder {
     color: rgba(253, 253, 253, 0.774);
     font-weight: 400;
     font-size: 15px;
@@ -925,4 +894,368 @@ footer {
     font-size: 17px;
     font-weight: 400;
     color: #ffffff;
+}
+
+
+
+/* ------------ responsive css for webpage --------------*/
+
+@media screen and (max-width: 768px) {
+
+
+
+
+    /* nav bar responsive */
+
+    .checkbtn {
+        display: block;
+    }
+
+    nav {
+        background: #000000cf;
+        height: 80px;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+
+    }
+
+    ul {
+        position: fixed;
+
+        width: 100vw;
+        height: 100vh;
+        background: #202020;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 18x;
+        text-decoration: none;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: #EF233C;
+        font-size: 20px;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+
+    /* home responsive */
+
+    .homeServices {
+        font-size: 50px;
+    }
+
+    .homeContainer {
+        padding-left: 50px;
+        padding-right: 0px;
+    }
+
+    .cv-download-btn {
+        font-size: 15px;
+    }
+
+    .homeName {
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .profilePic {
+        size: 50%;
+
+    }
+
+    /* about me responsive */
+
+    .aboutDiv {
+        height: 1000px;
+
+    }
+
+    .aboutContainer {
+        padding: 0px 200px;
+
+    }
+
+    .aboutBgPic {
+        margin: 0;
+        margin-top: 80px;
+        width: 400px;
+    }
+
+    .aboutRow {
+        display: block;
+        justify-content: center;
+
+
+    }
+
+    .aboutColoumn-2 {
+        padding-top: 5vh;
+        position: absolute;
+        max-width: 110vw;
+
+        justify-content: center;
+        margin-left: -350px;
+
+
+
+    }
+
+    .aboutText {
+        color: rgb(14, 13, 20);
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .aboutLine {
+
+        width: 400px;
+
+    }
+
+    /* services responsive */
+    .servicesDiv {
+        padding: 0px 100px;
+    }
+
+    .service-item {
+        margin: 50px 20px;
+
+        width: 200px;
+        height: 10px;
+
+
+    }
+
+    .service-icon {
+        padding: 50px 0px;
+        height: 200px;
+        width: 200px;
+
+    }
+
+    .col-item-service {
+
+        row-gap: 300px;
+    }
+
+    .serviceInfo {
+        font-size: 14px;
+
+    }
+
+
+
+    /* skills responsive */
+
+    .skillsDiv {
+        padding: 0px 50px;
+    }
+
+    .skillIcon {
+        width: 65px;
+        height: 65px;
+        margin-top: 5px;
+    }
+
+    .skills-dev {
+        width: 120px;
+        height: 120px;
+        padding: 10px 10px;
+
+    }
+
+    .col-item-skills-2pcs {
+
+        padding-top: 20px;
+        padding-left: 190px;
+        padding-right: 180px;
+
+    }
+
+
+    .skills-dev-3 {
+        width: 120px;
+        height: 140px;
+        padding: 10px 10px;
+
+
+    }
+
+    .col-item-skills-4pcs {
+
+        padding-top: 20px;
+        margin: 0 50px
+    }
+
+
+    /* education & experiance responsive */
+
+    .experienceDiv {
+        padding: 0 50px;
+        height: 1450px;
+
+    }
+
+    .experience .timeline::after {
+        left: 8px;
+    }
+
+    .experience .timeline .timeline-item {
+        width: 100%;
+        padding-left: 38px;
+    }
+
+    .experience .timeline .timeline-item.left {
+        padding-right: 0;
+    }
+
+    .experience .timeline .timeline-item.right {
+        left: 0%;
+        padding-left: 38px;
+    }
+
+    .experience .timeline .timeline-item.left::after,
+    .experience .timeline .timeline-item.right::after {
+        left: 0;
+    }
+
+    .experience .timeline .timeline-item.left::before,
+    .experience .timeline .timeline-item.right::before {
+        left: 18px;
+        border-color: transparent #dddddd transparent transparent;
+    }
+
+    .experience .timeline .timeline-item.left .timeline-date,
+    .experience .timeline .timeline-item.right .timeline-date {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .experience .timeline .timeline-item.left .timeline-text,
+    .experience .timeline .timeline-item.right .timeline-text {
+        border-right: none;
+        border-left: 5px solid #dddddd;
+    }
+
+
+
+    /* projects responsive */
+
+    .projectsDiv {
+
+        padding: 0 50px;
+        height: 1100px;
+    }
+
+    .projects-item {
+
+        width: 200px;
+        height: 350px;
+
+    }
+
+    .projectsIcon {
+        height: 150px;
+        width: 100%;
+
+
+    }
+
+
+    .project-text-area {
+        font-size: 15px;
+    }
+
+    .project-text-area {
+        height: 160px;
+    }
+
+
+
+
+    @media (max-width: 952px) {
+        .nav {
+            padding-right: 0px;
+        }
+
+        nav ul li a {
+            font-size: 18px;
+        }
+    }
+
+    nav i:hover {
+        color: #EF233C;
+        transition: 0.3s;
+    }
+
+
+    /* contact me responsive */
+
+    .contactDiv {
+        padding: 0 50px;
+        height: 1350px;
+
+    }
+
+
+
+    .contact-col-1 {
+        height: 400px;
+        width: 100%;
+
+    }
+
+    .contactSection {
+        display: block
+    }
+
+    .contactMe-title {
+        margin-top: -40px;
+    }
+
+
+    .contact-col-2 {
+
+        width: 100%;
+
+    }
+
+    #contact-name {
+
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    #contact-email {
+        margin-left: 0px;
+        width: 100%;
+
+
+    }
+
+
+
 }

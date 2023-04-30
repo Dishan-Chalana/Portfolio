@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <title>Chalana's portfolio</title>
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
 </head>
 
@@ -16,16 +17,22 @@
     <header>
         <!-- ---------------- navigation bar ---------------- -->
         <nav>
-            <ul>
-                <li> <a class="navLinks" href="#home-section">HOME</a></li>
-                <li> <a class="navLinks" href="#about-section">ABOUT</a></li>
-                <li> <a class="navLinks" href="#service-section">SERVICES</a></li>
-                <li> <a class="navLinks" href="#experience-section">EXPERIENCE</a></li>
-                <li> <a class="navLinks" href="#portfolio-section">PORTFOLIO</a></li>
-                <li> <a class="navLinks" href="#contact-section">CONTACT</a></li>
-            </ul>
+            
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <i class="fa fa-bars"></i>
+                </label>
+                
+                <ul>
+                  <li><a  href="#home-section">HOME</a></li>
+                  <li><a href="#about-section">ABOUT</a></li>
 
-            <!-- ---------------- home section ---------------- -->
+                  <li><a href="#">SERVICES</a></li>
+                  <li><a href="#experience-section">EXPERIENCE</a></li>
+                  <li><a href="#portfolio-section">PORTFOLIO</a></li>
+                  <li><a href="#contact-section">CONTACT</a></li>
+                </ul>
+              
 
         </nav>
     </header>
@@ -34,17 +41,17 @@
 
     <div class="homeDiv" id="home-section">
         <div class="homeContainer">
-            <h1 class="homeName">I'm Dishan Chalana</h1>
-            <h1 class="homeServices">Web Developer</h1>
-            <p class="homeAbout"> </p>
-            <button class="homeBtn">
-                My Resume&nbsp
-                <i href="#" class="fa fa-download"></i>
+          <h1 class="homeName">I'm Dishan Chalana</h1>
+          <h1 class="homeServices">Web Developer</h1>
+          <p class="homeAbout"></p>
+          <a href="https://drive.google.com/uc?export=download&id=11Jv6UO0EGWT9O_8imNb-rqR8RQvfp19Q" target="_blank">
+            <button class="cv-download-btn">
+              My Resume&nbsp;<i class="fa fa-download"></i>
             </button>
+          </a>
         </div>
         <img src="./src/img/hero.webp" alt="profilepic" class="profilePic">
-
-    </div>
+      </div>
 
 
 
