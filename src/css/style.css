@@ -39,6 +39,7 @@ body {
 
 }
 
+a:link { text-decoration: none; }
 
 
 /* ---------------- navigation ----------------  */
@@ -99,8 +100,8 @@ nav ul li a:hover {
 /* ---------------- home section ----------------  */
 .homeDiv {
     background-color: rgb(14, 13, 20);
-    width: 100%;
-    height: 850px;
+    max-width: 100%;
+    max-height: 850px;
     background-image: url("/src/img/Homebg.png");
     background-size: cover;
     background-position: center;
@@ -109,7 +110,7 @@ nav ul li a:hover {
 }
 
 .profilePic {
-    width: 100%;
+    max-width: 100%;
     max-width: 500px;
     height: auto;
 }
@@ -1250,7 +1251,7 @@ footer {
 }
 
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
 
     /* nav bar responsive */
     nav ul {
@@ -1483,7 +1484,7 @@ footer {
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
 
     /* nav bar responsive */
     nav ul {
