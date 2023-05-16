@@ -31,14 +31,6 @@ body {
 
 
 
-.circleBg {
-    display: flex;
-    width: 300px;
-    z-index: 9;
-    background-color: #636363;
-
-}
-
 a:link { text-decoration: none; }
 
 
@@ -46,8 +38,8 @@ a:link { text-decoration: none; }
 
 nav {
     background: rgba(0, 0, 0, 0.705);
-    height: 80px;
-    width: 100%;
+    height: 60px;
+    width: 100vw;
     position: fixed;
     top: 0;
     z-index: 11;
@@ -56,19 +48,20 @@ nav {
 
 nav ul {
     float: right;
-    margin-right: 300px;
+    margin-right: 200px;
+    
 }
 
 nav ul li {
     display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+    line-height: 60px;
+    
 }
 
 nav ul li a {
     color: white;
     font-size: 18px;
-    padding: 10px 10px;
+    padding: 0px 10px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -110,21 +103,25 @@ nav ul li a:hover {
 }
 
 .profilePic {
-    max-width: 100%;
+    
     max-width: 500px;
     height: auto;
+    position:-webkit-sticky 
+    
 }
 
 .homeContainer {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 10%;
+    padding-right: 10%;
     color: rgb(255, 255, 255);
     padding-top: 20vh;
+    overflow: hidden;
 }
 
 .homeName {
     font-size: 30px;
     font-weight: 200;
+    
 }
 
 .homeAbout {
@@ -134,7 +131,8 @@ nav ul li a:hover {
 .homeServices {
     margin-top: 10px;
     font-size: 80px;
-    max-width: 400px;
+    
+    
 
 }
 
@@ -168,7 +166,8 @@ nav ul li a:hover {
 }
 
 .aboutContainer {
-    padding: 0px 300px;
+    padding: 0px 180px;
+    overflow: hidden;
 }
 
 .sectionHeadder {
@@ -194,15 +193,13 @@ nav ul li a:hover {
 
 .aboutRow {
     display: flex;
-    justify-content: center;
+    
 
 }
 
 .aboutColoumn-1 {
     max-width: 50%;
-    align-items: center;
-    position: relative;
-
+    margin-right: 80px;
 
 }
 
@@ -213,8 +210,9 @@ nav ul li a:hover {
 }
 
 .aboutColoumn-2 {
-    padding-top: 30vh;
-    padding-left: 200px;
+    max-width: 50%;
+    margin-top: 200px;
+
 }
 
 .aboutText {
@@ -338,10 +336,9 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    gap: -500px;
-
+    display: flex;
     padding-top: 20px;
-    margin: 0 250px
+    gap:5%;
 }
 
 .col-item-skills-2pcs {
@@ -349,8 +346,8 @@ nav ul li a:hover {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     padding-top: 20px;
-    padding-left: 465px;
-    padding-right: 415px;
+    display: flex;
+    gap:5%;
 
 }
 
@@ -415,6 +412,7 @@ nav ul li a:hover {
 
 .skillsContainer {
     margin-bottom: 50px;
+    overflow: hidden;
 
 }
 
@@ -447,7 +445,7 @@ nav ul li a:hover {
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 1250px;
-    padding: 0 300px;
+    padding: 0 200px;
 
 }
 
@@ -588,7 +586,8 @@ nav ul li a:hover {
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 1400px;
-    padding: 0 300px;
+    padding: 0 100px;
+    margin-top: 20vh;
 
 }
 
@@ -601,31 +600,29 @@ nav ul li a:hover {
 
 .project-grid {
     margin-top: 50px;
+
 }
 
 .col-item-projects {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    padding-top: 20px;
     align-items: center;
     justify-content: center;
     justify-items: center;
     text-align: center;
-
-
-
-
+    
 }
 
 .projects-item {
 
     text-align: center;
-    width: 500px;
-    height: 550px;
+    width: 28vw;
+    height: 55vh;
     align-self: center;
     justify-self: center;
     margin: 10px;
     transition: 0.6s;
-
 
 }
 
@@ -637,8 +634,8 @@ nav ul li a:hover {
 }
 
 .projectsIcon {
-    height: 400px;
-    width: 100%px;
+    height: 40vh;
+    width: 28vw;
     text-align: center;
     text-decoration: none;
     /* box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.397); */
@@ -652,8 +649,7 @@ nav ul li a:hover {
 
 .project-text-area {
     background-color: #ffffff;
-    margin-top: -4px;
-    height: 100px;
+    height: 15vh;
     padding: 10px;
 
 
@@ -676,11 +672,12 @@ nav ul li a:hover {
 
     width: 100%;
     height: 850px;
-    padding: 0 300px;
+    padding: 0 10%;
     background-image: url("/src/img/footerBg.png");
     background-color: rgb(14, 13, 20);
     background-size: cover;
     background-position: center;
+    
 
 }
 
@@ -694,8 +691,9 @@ nav ul li a:hover {
 /* contact me left side */
 .contact-col-1 {
     background-color: rgba(255, 255, 255, 0.027);
-    width: 40%;
+    width: 45%;
     height: 550px;
+    
 }
 
 .contact-details-row {
@@ -744,6 +742,7 @@ nav ul li a:hover {
     text-align: center;
     text-decoration: none;
     font-weight: 400;
+    display: flex;
 
 }
 
@@ -752,6 +751,7 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0);
     width: 60%;
     height: 550px;
+    
 }
 
 .contact-form {
@@ -766,13 +766,15 @@ nav ul li a:hover {
 
 #contact-name {
     height: 50px;
-    width: 46%;
+    width: 48%;
     background-color: rgba(255, 255, 255, 0.100);
     border: none;
     border-radius: 7px;
     color: white;
     font-size: 15px;
     font-weight: 500;
+    
+    
 
 }
 
@@ -784,14 +786,15 @@ nav ul li a:hover {
 
 #contact-email {
     height: 50px;
-    width: 50%;
-    margin-left: 20px;
+    width: 48%;
+    margin-left: 2%;
     background-color: rgba(255, 255, 255, 0.100);
     border: none;
     border-radius: 7px;
     color: white;
     font-size: 15px;
     font-weight: 500;
+    
 }
 
 #contact-email::placeholder {
@@ -969,8 +972,10 @@ footer {
     }
 
     .homeContainer {
-        padding-left: 50px;
-        padding-right: 0px;
+        
+        
+       
+        overflow: hidden;
     }
 
     .cv-download-btn {
@@ -983,8 +988,8 @@ footer {
         margin-bottom: 20px;
     }
 
-    .profilePic {
-        size: 50%;
+    img.profilePic {
+        width: 400px;
 
     }
 
@@ -996,33 +1001,32 @@ footer {
     }
 
     .aboutContainer {
-        padding: 0px 200px;
+        padding: 0px 100px;
+        overflow: hidden;
 
     }
 
     .aboutBgPic {
-        margin: 0;
+        
         margin-top: 80px;
         width: 400px;
     }
 
     .aboutRow {
-        display: block;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
 
 
     }
+    .aboutColoumn-1 {
+        margin-left: 10%;
+    }
 
     .aboutColoumn-2 {
-        padding-top: 5vh;
-        position: absolute;
-        max-width: 110vw;
-
+        margin-top: 20px;
+        max-width: 110%;
         justify-content: center;
-        margin-left: -350px;
-
-
-
     }
 
     .aboutText {
@@ -1282,6 +1286,7 @@ footer {
     .homeContainer {
         padding-left: 70px;
         padding-right: 0px;
+        overflow: hidden;
 
     }
 
@@ -1299,28 +1304,26 @@ footer {
 
     .aboutContainer {
         padding: 0px 200px;
+        overflow: hidden;
 
     }
 
     .aboutBgPic {
 
-
-        width: 600px;
+        width: 500px;
     }
 
     .aboutRow {
-        display: block;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
 
     }
 
     .aboutColoumn-2 {
-        padding-top: 5vh;
-        position: absolute;
+        margin-top: 50px;
         max-width: 110vw;
-        justify-content: center;
-        margin-left: -350px;
-
+        
     }
 
     .aboutText {
@@ -1330,7 +1333,7 @@ footer {
     }
 
     .aboutLine {
-        width: 600px;
+        width: 40vw;
 
     }
 
@@ -1524,6 +1527,7 @@ footer {
     .homeContainer {
         padding-left: 150px;
         padding-right: 0px;
+        overflow: hidden;
 
     }
 
@@ -1535,28 +1539,22 @@ footer {
     /* about me responsive */
 
     .aboutContainer {
-        padding: 0px 250px;
+        padding: 0px 200px;
+        overflow: hidden;
     }
 
     .aboutBgPic {
 
-        width: 500px;
+        width: 450px;
     }
-
+    
     .aboutColoumn-2 {
-        padding-top: 13vh;
-        padding-left: 120px;
-
-
+        margin-top: 15vh;
     }
 
-    .aboutColoumn-1 {
-        max-width: 60%;
-        align-items: center;
-        position: relative;
+  
 
-    }
-
+   
     .aboutLine {
         width: 400px;
     }
@@ -1645,7 +1643,7 @@ footer {
     /* projects responsive */
 
     .projectsDiv {
-
+        margin-top: -100px;
         padding: 0 70px;
         height: 1300px;
     }
@@ -1660,17 +1658,14 @@ footer {
     .projectsIcon {
         height: 280px;
         width: 100%;
-
     }
-
 
     .project-text-area {
         font-size: 15px;
+        
     }
 
-    .project-text-area {
-        height: 160px;
-    }
+   
 
     /* contact me responsive */
 
@@ -1712,3 +1707,8 @@ footer {
         width: 100%;
     }
 }
+
+
+
+
+  
