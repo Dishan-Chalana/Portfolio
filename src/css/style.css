@@ -31,7 +31,17 @@ body {
 
 
 
-a:link { text-decoration: none; }
+a:link {
+    text-decoration: none;
+}
+
+h3,
+p,
+p:visited,
+p:hover,
+p:active {
+    color: black;
+}
 
 
 /* ---------------- navigation ----------------  */
@@ -49,13 +59,13 @@ nav {
 nav ul {
     float: right;
     margin-right: 200px;
-    
+
 }
 
 nav ul li {
     display: inline-block;
     line-height: 60px;
-    
+
 }
 
 nav ul li a {
@@ -103,25 +113,41 @@ nav ul li a:hover {
 }
 
 .profilePic {
-    
+
     max-width: 500px;
     height: auto;
-    position:-webkit-sticky 
-    
+    position: -webkit-sticky
 }
 
 .homeContainer {
     padding-left: 10%;
     padding-right: 10%;
     color: rgb(255, 255, 255);
-    padding-top: 20vh;
+    padding-top: 0vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 720px;
+    width: 100%;
+    margin-top: 100px;
+
+}
+
+.homeDiv-col-1 {
+    max-width: 50%;
+}
+
+.homeDiv-col-2 {
+    max-width: 50%;
+    margin-top: -100px;
 }
 
 .homeName {
     font-size: 30px;
     font-weight: 200;
-    
+
 }
 
 .homeAbout {
@@ -131,8 +157,8 @@ nav ul li a:hover {
 .homeServices {
     margin-top: 10px;
     font-size: 80px;
-    
-    
+
+
 
 }
 
@@ -193,7 +219,7 @@ nav ul li a:hover {
 
 .aboutRow {
     display: flex;
-    
+
 
 }
 
@@ -219,6 +245,7 @@ nav ul li a:hover {
     color: rgb(14, 13, 20);
     font-size: 20px;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .aboutLine {
@@ -321,6 +348,7 @@ nav ul li a:hover {
 .serviceInfo {
     margin-top: 10px;
 
+
 }
 
 /* ---------- skills section ----------- */
@@ -329,7 +357,7 @@ nav ul li a:hover {
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 1200px;
-    padding: 0 300px;
+    padding: 0 200px;
 }
 
 .col-item-skills-4pcs {
@@ -338,7 +366,7 @@ nav ul li a:hover {
     justify-content: center;
     display: flex;
     padding-top: 20px;
-    gap:5%;
+    gap: 5%;
 }
 
 .col-item-skills-2pcs {
@@ -347,7 +375,7 @@ nav ul li a:hover {
     justify-content: center;
     padding-top: 20px;
     display: flex;
-    gap:5%;
+    gap: 5%;
 
 }
 
@@ -585,7 +613,7 @@ nav ul li a:hover {
 .projectsDiv {
     background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 1400px;
+    height: 100%;
     padding: 0 100px;
     margin-top: 20vh;
 
@@ -605,24 +633,25 @@ nav ul li a:hover {
 
 .col-item-projects {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
     padding-top: 20px;
     align-items: center;
     justify-content: center;
     justify-items: center;
     text-align: center;
-    
+    margin-bottom: 100px;
+
 }
 
 .projects-item {
-
     text-align: center;
     width: 28vw;
-    height: 55vh;
     align-self: center;
     justify-self: center;
     margin: 10px;
     transition: 0.6s;
+
 
 }
 
@@ -634,7 +663,7 @@ nav ul li a:hover {
 }
 
 .projectsIcon {
-    height: 40vh;
+
     width: 28vw;
     text-align: center;
     text-decoration: none;
@@ -649,8 +678,9 @@ nav ul li a:hover {
 
 .project-text-area {
     background-color: #ffffff;
-    height: 15vh;
     padding: 10px;
+    padding-bottom: 50px;
+
 
 
 }
@@ -677,7 +707,7 @@ nav ul li a:hover {
     background-color: rgb(14, 13, 20);
     background-size: cover;
     background-position: center;
-    
+
 
 }
 
@@ -693,7 +723,7 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.027);
     width: 45%;
     height: 550px;
-    
+
 }
 
 .contact-details-row {
@@ -751,7 +781,7 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0);
     width: 60%;
     height: 550px;
-    
+
 }
 
 .contact-form {
@@ -773,8 +803,8 @@ nav ul li a:hover {
     color: white;
     font-size: 15px;
     font-weight: 500;
-    
-    
+
+
 
 }
 
@@ -794,7 +824,7 @@ nav ul li a:hover {
     color: white;
     font-size: 15px;
     font-weight: 500;
-    
+
 }
 
 #contact-email::placeholder {
@@ -913,8 +943,7 @@ footer {
 
 /* ------------ responsive css for webpage --------------*/
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 480px) {
     /* nav bar responsive */
 
     .checkbtn {
@@ -949,7 +978,7 @@ footer {
     }
 
     nav ul li a {
-        font-size: 18x;
+        font-size: 14px;
         text-decoration: none;
     }
 
@@ -957,7 +986,7 @@ footer {
     nav ul li a:hover {
         background: none;
         color: #EF233C;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     #check:checked~ul {
@@ -966,20 +995,38 @@ footer {
 
 
     /* home responsive */
+    h1.homeName {
+        font-size: 20px;
+    }
 
     .homeServices {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .homeContainer {
-        
-        
-       
+        padding: 0px 20px;
         overflow: hidden;
+        height: 500px;
+
+    }
+
+    .homeDiv-col-1 {
+        margin-top: -200px;
+    }
+
+    .homeDiv-col-2 {
+        margin: 0px;
+        width: 50%;
+    }
+
+    .profilePic {
+        width: 300px;
+
     }
 
     .cv-download-btn {
         font-size: 15px;
+        margin-top: 20px;
     }
 
     .homeName {
@@ -988,39 +1035,41 @@ footer {
         margin-bottom: 20px;
     }
 
-    img.profilePic {
-        width: 400px;
-
-    }
 
     /* about me responsive */
 
-    .aboutDiv {
-        height: 1000px;
 
-    }
 
     .aboutContainer {
-        padding: 0px 100px;
+        padding: 0px 20px;
         overflow: hidden;
 
     }
 
     .aboutBgPic {
-        
         margin-top: 80px;
-        width: 400px;
+        width: 300px;
+
     }
 
     .aboutRow {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-
+        align-items: center;
     }
+
+    p.aboutText {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
     .aboutColoumn-1 {
         margin-left: 10%;
+    }
+
+    div.aboutLine {
+        width: 80%;
     }
 
     .aboutColoumn-2 {
@@ -1043,13 +1092,13 @@ footer {
 
     /* services responsive */
     .servicesDiv {
-        padding: 0px 100px;
+        padding: 0px 20px;
+        height: 100%;
     }
 
     .service-item {
         margin: 50px 20px;
-
-        width: 200px;
+        width: 180px;
         height: 10px;
 
 
@@ -1057,70 +1106,81 @@ footer {
 
     .service-icon {
         padding: 50px 0px;
-        height: 200px;
-        width: 200px;
+        height: 190px;
+        width: 190px;
 
     }
 
     .col-item-service {
-
+        display: flex;
+        flex-wrap: wrap;
         row-gap: 300px;
+
     }
 
     .serviceInfo {
-        font-size: 14px;
+        font-size: 12px;
+        max-width: 100%;
 
     }
-
 
 
     /* skills responsive */
 
     .skillsDiv {
-        padding: 0px 50px;
+        padding: 0px 10px;
+        margin-top: 270px;
+    }
+
+    .skills-sub-bg {
+        height: 200px;
     }
 
     .skillIcon {
-        width: 65px;
-        height: 65px;
+        width: 35px;
+        height: 35px;
         margin-top: 5px;
     }
 
     .skills-dev {
-        width: 120px;
-        height: 120px;
+        width: 85px;
+        height: 90px;
         padding: 10px 10px;
 
     }
 
-    .col-item-skills-2pcs {
-
-        padding-top: 20px;
-        padding-left: 190px;
-        padding-right: 180px;
-
+    .skill-section-2 .skills-dev {
+        height: 90px;
     }
 
+    .skillsDiv h3 {
+        font-size: 11px;
+    }
 
     .skills-dev-3 {
-        width: 120px;
-        height: 140px;
+        width: 85px;
+        height: 100px;
         padding: 10px 10px;
 
 
     }
 
     .col-item-skills-4pcs {
-
         padding-top: 20px;
         margin: 0 50px
+    }
+
+    .skills-sub-bg-3 {
+        height: 210px;
     }
 
 
     /* education & experiance responsive */
 
     .experienceDiv {
-        padding: 0 50px;
+        margin-top: -200px;
+        padding-top: 0px;
+        padding: 0 20px;
         height: 1450px;
 
     }
@@ -1174,33 +1234,41 @@ footer {
 
     /* projects responsive */
 
-    .projectsDiv {
+    div#portfolio-section.projectsDiv {
+        padding: 0 0;
+    }
 
-        padding: 0 50px;
-        height: 1200px;
+    .projectsDiv {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .col-item-projects {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+
+
     }
 
     .projects-item {
-
-        width: 200px;
-        height: 350px;
-
+        width: 80%;
+        height: 100%;
     }
 
     .projectsIcon {
-        height: 150px;
+        height: 100%;
         width: 100%;
-
-
     }
 
 
     .project-text-area {
         font-size: 15px;
+
     }
 
     .project-text-area {
-        height: 160px;
+        height: 100%;
     }
 
 
@@ -1208,18 +1276,32 @@ footer {
     /* contact me responsive */
 
     .contactDiv {
-        padding: 0 50px;
-        height: 1350px;
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;
 
     }
-
-
 
     .contact-col-1 {
-        height: 400px;
+        height: 100%;
         width: 100%;
 
+
     }
+
+    .contact-detais-rows {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+
+    }
+
+    h1.contactMe-tag {
+        font-size: 15px;
+
+    }
+
 
     .contactSection {
         display: block
@@ -1252,6 +1334,417 @@ footer {
 
 
 
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* nav bar responsive */
+
+    .checkbtn {
+        display: block;
+    }
+
+    nav {
+        background: #000000cf;
+        height: 80px;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+
+    }
+
+    ul {
+        position: fixed;
+
+        width: 100vw;
+        height: 100vh;
+        background: #202020;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: #EF233C;
+        font-size: 14px;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+
+    /* home responsive */
+    h1.homeName {
+        font-size: 20px;
+    }
+
+    .homeServices {
+        font-size: 45px;
+    }
+
+    .homeContainer {
+        padding: 0px 20px;
+        overflow: hidden;
+        height: 500px;
+
+    }
+
+    .homeDiv-col-1 {
+        margin-top: -200px;
+    }
+
+    .homeDiv-col-2 {
+        margin: 0px;
+        width: 50%;
+    }
+
+    .profilePic {
+        width: 300px;
+
+    }
+
+    .cv-download-btn {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .homeName {
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+
+    /* about me responsive */
+
+
+
+    .aboutContainer {
+        padding: 0px 20px;
+        overflow: hidden;
+
+    }
+
+    .aboutBgPic {
+        margin-top: 80px;
+        width: 300px;
+
+    }
+
+    .aboutRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p.aboutText {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .aboutColoumn-1 {
+        margin-left: 10%;
+    }
+
+    div.aboutLine {
+        width: 100%;
+
+    }
+
+    .aboutColoumn-2 {
+        margin-top: 20px;
+        max-width: 110%;
+        justify-content: center;
+
+    }
+
+
+
+    div.socialLinks {
+        justify-content: center
+    }
+
+    .aboutText {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .aboutLine {
+
+        width: 400px;
+
+    }
+
+    /* services responsive */
+    .servicesDiv {
+        padding: 0px 20px;
+        height: 100%;
+    }
+
+    .service-item {
+        margin: 50px 20px;
+        width: 180px;
+        height: 10px;
+
+
+    }
+
+    .service-icon {
+        padding: 50px 0px;
+        height: 190px;
+        width: 190px;
+
+    }
+
+    .col-item-service {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 300px;
+
+    }
+
+    .serviceInfo {
+        font-size: 12px;
+        max-width: 100%;
+
+    }
+
+
+    /* skills responsive */
+
+    .skillsDiv {
+        padding: 0px 10px;
+        margin-top: 270px;
+    }
+
+    .skills-sub-bg {
+        height: 200px;
+    }
+
+    .skillIcon {
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+    }
+
+    .skills-dev {
+        width: 85px;
+        height: 90px;
+        padding: 10px 10px;
+
+    }
+
+    .skill-section-2 .skills-dev {
+        height: 90px;
+    }
+
+    .skillsDiv h3 {
+        font-size: 11px;
+    }
+
+    .skills-dev-3 {
+        width: 85px;
+        height: 100px;
+        padding: 10px 10px;
+
+
+    }
+
+    .col-item-skills-4pcs {
+        padding-top: 20px;
+        margin: 0 50px
+    }
+
+    .skills-sub-bg-3 {
+        height: 210px;
+    }
+
+
+    /* education & experiance responsive */
+
+    .experienceDiv {
+        margin-top: -200px;
+        padding-top: 0px;
+        padding: 0 20px;
+        height: 1450px;
+
+    }
+
+    .experience .timeline::after {
+        left: 8px;
+    }
+
+    .experience .timeline .timeline-item {
+        width: 100%;
+        padding-left: 38px;
+    }
+
+    .experience .timeline .timeline-item.left {
+        padding-right: 0;
+    }
+
+    .experience .timeline .timeline-item.right {
+        left: 0%;
+        padding-left: 38px;
+    }
+
+    .experience .timeline .timeline-item.left::after,
+    .experience .timeline .timeline-item.right::after {
+        left: 0;
+    }
+
+    .experience .timeline .timeline-item.left::before,
+    .experience .timeline .timeline-item.right::before {
+        left: 18px;
+        border-color: transparent #dddddd transparent transparent;
+    }
+
+    .experience .timeline .timeline-item.left .timeline-date,
+    .experience .timeline .timeline-item.right .timeline-date {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .experience .timeline .timeline-item.left .timeline-text,
+    .experience .timeline .timeline-item.right .timeline-text {
+        border-right: none;
+        border-left: 5px solid #dddddd;
+    }
+
+
+
+    /* projects responsive */
+
+    div#portfolio-section.projectsDiv {
+        padding: 0 0;
+        margin-top: 0px;
+
+
+    }
+
+    .projectsDiv {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .col-item-projects {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+
+    }
+
+    .projects-item {
+        width: 80%;
+        height: 100%;
+    }
+
+    .projectsIcon {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .project-text-area {
+        font-size: 15px;
+
+    }
+
+    .project-text-area {
+        height: 100%;
+    }
+
+
+
+    /* contact me responsive */
+
+    .contactDiv {
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .contact-col-1 {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .contact-detais-rows {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+
+
+    }
+
+
+    .contactSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactMe-title {
+        margin-top: -40px;
+    }
+
+
+    .contact-col-2 {
+
+        width: 100%;
+
+    }
+
+    #contact-name {
+
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    #contact-email {
+        margin-left: 0px;
+        width: 100%;
+
+
+    }
+
+
+
+
+
+
 }
 
 
@@ -1277,17 +1770,12 @@ footer {
 
     }
 
-    .profilePic {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-    }
-
     .homeContainer {
-        padding-left: 70px;
-        padding-right: 0px;
+        padding: 0px 100px;
         overflow: hidden;
-
+        justify-content: center;
+        align-items: center;
+        height: 780px;
     }
 
 
@@ -1303,9 +1791,16 @@ footer {
     }
 
     .aboutContainer {
-        padding: 0px 200px;
+        padding: 0px 100px;
         overflow: hidden;
 
+    }
+
+    .aboutColoumn-1 {
+        max-width: 110vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .aboutBgPic {
@@ -1323,7 +1818,7 @@ footer {
     .aboutColoumn-2 {
         margin-top: 50px;
         max-width: 110vw;
-        
+
     }
 
     .aboutText {
@@ -1340,6 +1835,7 @@ footer {
     /* services responsive */
     .servicesDiv {
         padding: 0px 70px;
+        height: 100%;
     }
 
     .service-item {
@@ -1367,44 +1863,51 @@ footer {
     /* skills responsive */
 
     .skillsDiv {
-        padding: 0px 70px;
+        padding: 0px 10px;
+        margin-top: 270px;
+        height: 100%;
+    }
+
+    .skills-sub-bg {
+        height: 250px;
     }
 
     .skillIcon {
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
         margin-top: 5px;
     }
 
     .skills-dev {
-        width: 140px;
-        height: 140px;
+        width: 125px;
+        height: 135px;
         padding: 10px 10px;
 
     }
 
-    .col-item-skills-2pcs {
-
-        padding-top: 20px;
-        padding-left: 260px;
-        padding-right: 200px;
-
+    .skill-section-2 .skills-dev {
+        height: 130px;
     }
 
+    .skillsDiv h3 {
+        font-size: 11px;
+    }
 
     .skills-dev-3 {
-        width: 140px;
-        height: 160px;
+        width: 125px;
+        height: 135px;
         padding: 10px 10px;
 
 
     }
 
     .col-item-skills-4pcs {
-
         padding-top: 20px;
-        margin-left: 70px;
-        margin-right: 10px;
+        margin: 0 50px
+    }
+
+    .skills-sub-bg-3 {
+        height: 260px;
     }
 
 
@@ -1412,7 +1915,6 @@ footer {
 
     .experienceDiv {
         padding: 0 50px;
-        height: 1450px;
 
     }
 
@@ -1420,31 +1922,25 @@ footer {
     /* projects responsive */
 
     .projectsDiv {
+        padding: 0 10px;
+        margin-top: 150px;
 
-        padding: 0 70px;
-        height: 1300px;
     }
 
     .projects-item {
-
-        width: 300px;
-        height: 450px;
-
+        width: 95%;
     }
 
     .projectsIcon {
-        height: 250px;
+
         width: 100%;
-
     }
-
 
     .project-text-area {
         font-size: 15px;
-    }
+        max-height: 200px;
 
-    .project-text-area {
-        height: 160px;
+
     }
 
     /* contact me responsive */
@@ -1455,15 +1951,18 @@ footer {
 
     }
 
-
-
     .contact-col-1 {
         height: 400px;
         width: 100%;
+
+    }
+
+    h1.contactMe-tag {
+        font-size: 20px;
     }
 
     .contactSection {
-        display: block
+        display: block;
     }
 
     .contactMe-title {
@@ -1495,15 +1994,6 @@ footer {
         margin-right: 100px;
     }
 
-    nav ul li a {
-        font-size: 14px;
-
-    }
-
-    nav ul li a.active,
-    nav ul li a:hover {
-        font-size: 14px;
-    }
 
     /* home responsive */
 
@@ -1518,22 +2008,13 @@ footer {
 
     }
 
-    .profilePic {
-        width: 100%;
-        margin-left: 100px;
-        float: left;
-    }
-
     .homeContainer {
-        padding-left: 150px;
-        padding-right: 0px;
+        padding: 0px 100px;
         overflow: hidden;
-
+        justify-content: center;
+        align-items: center;
+        height: 780px;
     }
-
-
-
-
 
 
     /* about me responsive */
@@ -1547,14 +2028,14 @@ footer {
 
         width: 450px;
     }
-    
+
     .aboutColoumn-2 {
         margin-top: 15vh;
     }
 
-  
 
-   
+
+
     .aboutLine {
         width: 400px;
     }
@@ -1662,10 +2143,11 @@ footer {
 
     .project-text-area {
         font-size: 15px;
-        
+
     }
 
-   
+
+
 
     /* contact me responsive */
 
@@ -1707,8 +2189,3 @@ footer {
         width: 100%;
     }
 }
-
-
-
-
-  
